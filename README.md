@@ -8,8 +8,16 @@ I am going to assume that you have Unity already installed on your computer and 
 
 If you do not have Unity installed go to www.unity3d.com and install it. As I write this the latest version of Unity for Windows is 5.5.1f1
 
-Next thing that you will need is the Vuforia SDK for Unity. Go to https://developer.vuforia.com/ and register for a free account. Once you have an account and are signed in go the "Downloads" tab and choose the SDK tab undearneath that. You will want to "Download for Unity", as I write this the latest Vuforia version is 6.2.10.
+Next thing that you will need is the Vuforia SDK for Unity. Go to https://developer.vuforia.com/ and register for a free account. Once you have an account and are signed in go the "Downloads" tab and choose the "SDK" tab undearneath that. You will want to "Download for Unity", as I write this the latest Vuforia version is 6.2.10.
 
 <hr> </hr>
 
-So now that you have all the required software lets 
+<h3> Basic Unity Vuforia setup </h3>
+
+The app that we are creating is going to be very simple. It will recognize a specific image that you have given it and then will place a Unity GameObject on top of that image in the AR scene. This is the most basic AR app that you can make but it was a starting point for me and also I think that it is a great place for you to start as well because it gives you the basics of how to make a Unity Vuforia AR scene and you can just build on it from there to make complex apps.
+
+One last thing to note, I am going to be making this app for Android. So if you have an Android phone and you have it in developer mode enabled then you can build and test this app using your phone straight from Unity.
+
+Open up Unity and create a new 3D project, name it whatever you want. I am going to name mine "ARTutorialBasics". 
+
+Now lets grab the Core Features samples package from the Vuforia website. Go to https://developer.vuforia.com/ click on the "Downloads" tab and choose the "Samples" tab underneath that. Look for the "Core Features" and then click "Download for Unity". This will give you a .zip file with the basic components that you will need to create this VR app. 
