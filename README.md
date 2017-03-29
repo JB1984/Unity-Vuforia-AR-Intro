@@ -8,7 +8,7 @@ I am going to assume that you have Unity already installed on your computer and 
 
 If you do not have Unity installed go to www.unity3d.com and install it. As I write this the latest version of Unity for Windows is 5.5.1f1
 
-Next thing that you will need is the Vuforia SDK for Unity. Go to https://developer.vuforia.com/ and register for a free account. Once you have an account and are signed in go the "Downloads" tab and choose the "SDK" tab undearneath that. You will want to "Download for Unity", as I write this the latest Vuforia version is 6.2.10.
+Next thing that you will need is the Vuforia SDK for Unity. Go to https://developer.vuforia.com/ and register for a free account. Once you have an account and are signed in go the "Downloads" tab choose the "SDK" tab undearneath that. You will want to "Download for Unity", as I write this the latest Vuforia version is 6.2.10.
 
 <hr> </hr>
 
