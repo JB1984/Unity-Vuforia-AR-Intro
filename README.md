@@ -22,4 +22,8 @@ Open up Unity and create a new 3D project, name it whatever you want. I am going
 
 Now lets grab the Core Features samples package from the Vuforia website. Go to https://developer.vuforia.com/ click on the "Downloads" tab and choose the "Samples" tab underneath that. Look for the "Core Features" and then click "Download for Unity". This will give you a .zip file with the basic components that you will need to create this VR app. You will notice that there are a lot of really cool Core Features in the Vuforia SDK but for this very basic starter app we are only going to be concerned with "Image Targets". In later tutorials we will go through more of the Core Features and also use some of the features listed in the "Advanced Topics" samples.
 
+Once the "Core Feature" has downloaded lets create a new folder on the desktop to hold the .zip contents. I am going to name mine VuforiaSamples but feel free to name the folder whatever you want.
+
+
+
 
