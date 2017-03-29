@@ -26,8 +26,11 @@ Once the "Core Feature" has downloaded lets create a new folder on the desktop t
 
 Lets go back to Unity now and click on the Assets tab of the Unity toolbar. Go to "Import Package", and then "Custom Package". Click on this and navigate to the folder we just made with the Vuforia Core Feature samples. Select and open the "VuforiaSamples". Unity will decompress and import the items of this file. You will then be given a pop-up with the option to select files. Make sure that all of the items are selected and then hit Import.
 
-Thats it for this section, you have now imported the basic components of the Vuforia SDK in to Unity. Congrats!
+We are almost done with the basic Vuforia setup.
 
+Lets do one last thing. In all Vuforia applications we do not use the standard "Main Camera" that is provided to us by Unity. We use a special ARCamera prefab that comes with Vuforia. So lets first delete the "Main Camera" from the current Scene Hierachy. We will see a "No Cameras Rendering" in the game view, thats fine. Lets now navigate in the Project area of Unity to the "Vuforia" folder, and click the dropdown arrow next to it. Now select the "Prefabs" folder. You will see a prefab in this folder called "ARCamera" drag and drop this in to your Unity scene. In the cameras Transform component change the rotation of X to be 90. Leave the "World Center Mode" to be "FIRST_TARGET". 
+
+Now lets click on the "Open Vuforia configuration" button, this configuration menu we are opening up is very useful and we will use it many times going forward so just remember that it is attached to the ARcamera GameObject. Now that we have the Vuforia Configuration open we can input our Vuforia App License key. Without putting a key here when we try and run the app we will recieve a "no key found" error and we will not be able to run the app. Oh wait, we dont have a key, well on to the next chapter in this tutorial I guess:)
 
 
 
