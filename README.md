@@ -64,8 +64,50 @@ So now that you have your image target database setup make sure that you have th
 
 Your ImageTarget database is now in the Unity Editor. To check that this worked successfully you should go in your Unity Editor to the project panel. In there choose the folders Editor -> QCAR -> ImageTargetTextures -> "the name of the database you made". You should see a file in their with the name you have given your image in the database. Now as of right now Unity does not convert the image correctly on import so you will need to select the image and in the Unity Inspector change the "Texture Type" to "Default" and the "Texture Shape" to "2D". You will have to click away and then it will prompt you to accept the changes, when you accept you should be able to now see and preview your image.
 
+To finish up adding this database to our Unity project we need to go back to the ARCamera, so click on that in the Hierarchy. Click the "Open Vuforia configuration" button. We need to Load the database and set it active so that Unity knows to use that database when looking for ImageTargets when our app is running. So under the "Datasets" dropdown find the checkbox with "Load" and your database name, check the box. Also make sure to check the "Activate" checkbox that pops up underneath. I dont want to go in to too much detail here but you can only have one database "Active" at any given time but you can programmatically change which database is active. For out purposes one database is all we need so we load it and set it active.
 
+<h3> Adding an ImageTarget to your Unity scene </h3>
 
+Now that we have our ImageTarget database all loaded and set we can add an ImageTarget prefab to our Unity scene. Go to the Vuforia -> Prefabs folder in the Projects panel. You will see multiple prefabs, drag and drop the "ImageTarget" prefab from this folder in to the Hierarchy. We now need to adjust the camera slighlty so we can see the ImageTarget GameObject, for development purposes it will be easier this way, so select the ARCamera and change its Y Position to 10 (or whatever works for you to see the ImageTarget in the Game preview window). 
+
+Now that we can preview the ImageTarget lets add our image we had from our ImageTarget database. Select the ImageTarget in the Hierarchy and in the Inspector look for the "Image Target Behaviour" script. Set the variables to be
+
+Type: Predefined
+Database: *Name of your database*
+Image Target: *Name of your target*
+
+You should now see your image appear in the Game Preview window as well as on the ImageTarget object in the Scene view. 
+
+The next step is to add the sphere we want to appear when we see this ImageTarget using the app and the phone camera. So with the ImageTarget selected in the Hierarchy right click it. Choose to "3D Object" and then "Sphere", this should create a sphere GameObject as a child of the ImageTarget. Adjust the sphere scale and position so that it is around the same size as the ImageTarget and hovers slightly above the ImageTarget.
+
+That is all you need to do with editing the scene, we just need to make some changes to the Build Configuration so it will build for Android.
+
+<h3> Build Configuration changes and testing the app! </h3>
+
+Lets make it so that our App compiles and runs on Android devices. Go to "File" in the toolbar and select "Build Settings". Click the "Add Open Scene" button. In the "Platform" menu choose Android and then hit the "Switch Platform" button. Unity will recompile your project so just wait a minute. When that is done hit the "Player Settings" button. So one of the tricks to using Unity and building your project for Android is that you need to make sure that the "Company Name" field and the "Product Name" field match up with the "Bundle Identifier" field in the "other settings" section. 
+
+So first off change the "Company Name" to something that makes sense to you, I just use my name so "JasonBenner" next you do not need to change the "Product Name" if you dont want to, it will just default to whatever you named your project. The last thing to do is click the "other settings" box and it will expand to show you many options. The one we want to change is the "Bundle Identifier" you will need to change this to
+
+com.*Company Name*.*Product Name*
+
+so in my case it is
+
+com.JasonBenner.ARTutorialBasics
+
+Ok so save your project now, make sure your phone is plugged in to your computer, and then back in the Build Settings window select the 
+"Build and Run" button. You may be asked to save your apk file if this is the first time you are building your project so just save it with whatever name you want, I usually do "main".
+
+Once Unity builds your app and installs the apk on your phone you it will also likely start your application up. So just wait a while for this to happen. Now that you app is running use your phone and aim the camera at the item you used in your image target. You do need to usually wait a few seconds for the camera to focus and also you may need to move the camera around a bit depending on how well your image is able to be detected but the sphere GameObject should now show up on top, hovering above, your item in the camera. 
+
+<h3> CONGRATS ON YOUR FIRST AR APP!! </h3> 
+
+Well I know that we didnt do anything complicated in this tutorial but just look at what you accomplished, you created a virutal object that seems to be hovering above a real object in the real world! That is pretty cool and you should feel really good about this!
+
+There is so much more you can do however and I am sure that your brain is already thinking of all the possibilites like mine was when I created my first AR app. 
+
+I am thinking that my next tutorial will go through the next step that I took on my AR development journey and that was to instead of instantiate a sphere GameObject with an ImageTarget I thought about instantiating text next to the object. Like maybe when you see something it will tell you about that item with a little pop-up next to the item within the real world space. Also I will add in another element that I did after that which is similar, adding a video that pops up next to the item and plays. Both of these will require some edits to the basic Vuforia scripts so we will also get in to some basic C# coding next tutorial (fun stuff I promise!)
+
+I encourage you to continue to experiment and explore the Vuforia samples that are provided in the package that we imported. They are great starting points and learning tools, that is how I go started in Vuforia development. 
 
 
 
