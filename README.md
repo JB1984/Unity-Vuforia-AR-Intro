@@ -40,6 +40,22 @@ You will now be at a page that lists your license key. Copy the key and then go 
 
 In Unity select your ARCamera GameObject and then click the "Open Vuforia configuratoin". At the top of this menu you will see a blank box where you can input your App license key. Copy and paste your Vuforia license key here and then save your project.
 
+<h3> Image for ImageTarget </h3>
+
+Ok so now that we have the fundamental setup of our AR app in place lets set up an image for the ImageTarget. An ImageTarget is simply a GameObject that has an image attached to it. When your app see's that image through the camera of whatever device you are running the app on it will trigger an action to take place. It our app that action is simply going to be to instantiate another GameObject in our scene. We are going to have it instantiate a sphere just for simplicity, but know that it can be any GameOjbect.
+
+So the first thing we are going to do is go back to the Vuforia website and back to the "Develop" tab and select the "Target Manager" sub tab. Vuforia works off of databases of images that we use as ImageTargets. We can have a database of one image, as is the case with our app, or thousands for more complicated apps. We want to create a new database for our app so we hit the "Add Database" button. For simplicity we are going to make this a "Device" database type so select this option. We could make it in the cloud but we will leave that for a later tutorial. Give the database any name you want and hit the "Create" button.
+
+Now that we have a database to put our images in and make them in to targets (Vuforia automatically manages the process to make the images in to targets) we simply need to have an image of an item we want to have our VR app instantiate the sphere on top of. You can use anything around you, I used a pack of gum since that was near me. Use anything that has a semi unique packaging or look to it. The easiest way to get the image for me was to take a picture with my phone and then send it to myself on the computer so I could then upload it. Just make sure that whatever picture you take of the item has that item itself fill almost the entire picture and that it is as clear and in focus as possible. When you have the image of your target ready to go head to the next step.
+
+You will now see that name in the Target Manger menu, select it. You can now see all the images you have as targets within that database. We do not have any yet so it is blank and we want to add a new image so we select "Add Target". You can add many types of targets but we want to have "Single Image" selected. Click the "Browse" button and find the image that we wanted to use from the previous steps.
+
+The next step is rather tricky and I am still learning to master it myself but you want to enter in the Width of the image, this will help to scale the item when you put it in your Unity scene. I have found that entering something like 0.24 seems to work well in here and matches up pretty easily with basic Unity GameObjects. 
+
+Last you will want to enter a name for the image. When you have done that hit the "Add" button.
+
+Your image is now being added to this Vuforia database and you will see the Status column is listed as "Processing" or "Active". If it is processing you will need to refresh the page in a few minutes because Vuforia is building the ImageTarget from the image you uploaded. If you see "Active" you know the processing is done and your database is now readtg to be downloaded and used in your Unity app!
+
 
 
 
