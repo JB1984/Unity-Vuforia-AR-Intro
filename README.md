@@ -30,7 +30,21 @@ We are almost done with the basic Vuforia setup.
 
 Lets do one last thing. In all Vuforia applications we do not use the standard "Main Camera" that is provided to us by Unity. We use a special ARCamera prefab that comes with Vuforia. So lets first delete the "Main Camera" from the current Scene Hierachy. We will see a "No Cameras Rendering" in the game view, thats fine. Lets now navigate in the Project area of Unity to the "Vuforia" folder, and click the dropdown arrow next to it. Now select the "Prefabs" folder. You will see a prefab in this folder called "ARCamera" drag and drop this in to your Unity scene. In the cameras Transform component change the rotation of X to be 90. Leave the "World Center Mode" to be "FIRST_TARGET". 
 
-Now lets click on the "Open Vuforia configuration" button, this configuration menu we are opening up is very useful and we will use it many times going forward so just remember that it is attached to the ARcamera GameObject. Now that we have the Vuforia Configuration open we can input our Vuforia App License key. Without putting a key here when we try and run the app we will recieve a "no key found" error and we will not be able to run the app. Oh wait, we dont have a key, well on to the next chapter in this tutorial I guess:)
+<h3> Vuforia license key<h3>
+
+Now lets click on the "Open Vuforia configuration" button, this configuration menu we are opening up is very useful and we will use it many times going forward so just remember that it is attached to the ARcamera GameObject. Now that we have the Vuforia Configuration open we can input our Vuforia App License key. Without putting a key here when we try and run the app we will recieve a "no key found" error and we will not be able to run the app.
+
+Ok so lets go back to the Vuforia website, making sure that you are logged in. Click on the "Develop" tab and then the "license Manager" sub tab. You will see a button called "Add License Key", click on this. You will need to select a project type, you should select the type that fits your porject but just know that all keys other than "Development" require money to use. You can develop using Vuforia at no cost. So that is what we are going to do, select the "Development" type for your app. Give your App a name and then click "Next". You will be asked to confirm the items so check the confirm box and hit the "confirm" button. You will now see the app listed in your License Manager menu. Click on this app name.
+
+You will now be at a page that lists your license key. Copy the key and then go back to Unity.
+
+In Unity select your ARCamera GameObject and then click the "Open Vuforia configuratoin". At the top of this menu you will see a blank box where you can input your App license key. Copy and paste your Vuforia license key here and then save your project.
+
+
+
+
+
+
 
 
 
