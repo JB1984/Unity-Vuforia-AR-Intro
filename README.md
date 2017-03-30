@@ -58,6 +58,12 @@ Your image is now being added to this Vuforia database and you will see the Stat
 
 As a side note you will see a column called Rating. This represents on a scale of 1-5 stars how well Vuforia thinks the app will be able to recognize the ImageTarget. I have found that anything less than 4 stars is not going to work well at all, so if you see this as less than 4 stars you may want to take another picture of the item and upload it again. 
 
+<h3> Adding ImageTarget Database to your Unity Project </h3>
+
+So now that you have your image target database setup make sure that you have the checkmark next to the image selected and hit the "Download Database" button. You will be given a list of development platforms to select from, we are going to choose Unity Editor and hit the "Download" button. This will download a .unitypackage file. Simply open this file once it is downloaded, if you also have Unity open on the project we are working on (which you should if you have been following this tutorial) then when you click the .unitypackage Vuforia databse file you will be presented with an Import Unity Package popup. Simply make sure all the items are checked and then hit the "Import" button. 
+
+Your ImageTarget database is now in the Unity Editor. To check that this worked successfully you should go in your Unity Editor to the project panel. In there choose the folders Editor -> QCAR -> ImageTargetTextures -> "the name of the database you made". You should see a file in their with the name you have given your image in the database. Now as of right now Unity does not convert the image correctly on import so you will need to select the image and in the Unity Inspector change the "Texture Type" to "Default" and the "Texture Shape" to "2D". You will have to click away and then it will prompt you to accept the changes, when you accept you should be able to now see and preview your image.
+
 
 
 
