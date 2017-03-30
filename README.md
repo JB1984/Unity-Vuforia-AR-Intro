@@ -56,6 +56,8 @@ Last you will want to enter a name for the image. When you have done that hit th
 
 Your image is now being added to this Vuforia database and you will see the Status column is listed as "Processing" or "Active". If it is processing you will need to refresh the page in a few minutes because Vuforia is building the ImageTarget from the image you uploaded. If you see "Active" you know the processing is done and your database is now readtg to be downloaded and used in your Unity app!
 
+As a side note you will see a column called Rating. This represents on a scale of 1-5 stars how well Vuforia thinks the app will be able to recognize the ImageTarget. I have found that anything less than 4 stars is not going to work well at all, so if you see this as less than 4 stars you may want to take another picture of the item and upload it again. 
+
 
 
 
