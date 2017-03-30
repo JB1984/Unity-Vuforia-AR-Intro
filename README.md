@@ -1,4 +1,4 @@
-# UnityVuforiaARIntro
+# Unity Vuforia AR Intro
 
 <h3> Required software and knowledge </h3>
 
