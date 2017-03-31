@@ -2,7 +2,7 @@
 
 <h3> Required software and knowledge </h3>
 
-This repository is an intro tutorial for people interested in starting to use Unity and Vuforia for AR applications.
+This repository is an intro tutorial for people interested in starting to use Unity and Vuforia for AR applications. I am going to be updating this tutorial over time, fixing gramatical errors and any sections that are confusing. My first draft is going to be somewhat train-of-thought so please bear with me. Also I may make my tutorials in to YouTube videos in the near future as seeing the steps being done in a video can be very helpful.
 
 I am going to assume that you have Unity already installed on your computer and that you have a basic level of understanding of the Unity editor and C# scripting. In this tutorial we do not do anything too complex with either the editor or scripting so dont worry if you are still relatively new.
 
